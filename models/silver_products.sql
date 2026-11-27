@@ -1,7 +1,9 @@
 SELECT
     id,
-    date_format(created_at, 'yyyy-MM-dd') as date,
-    title, 
+    created_at,
+    title as product_name, 
     category,
-    ean
+    ean,
+    vendor,
+    price
 from {{ ref('bronze_products')}}

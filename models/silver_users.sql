@@ -1,10 +1,8 @@
 SELECT
     id,
-    date_format(created_at, 'yyyy-MM-dd') as date,
-    name,
-    email,
+    created_at,
     city,
     state,
-    zip,
-    year(birth_date) as birth_year
+    year(birth_date) as birth_year,
+    source as sales_chanel
 from {{ ref('bronze_users')}}
