@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: landing
+    database: dbt_project
+    schema: data_landing
+    tables:
+      - name: orders
+      - name: products
+      - name: reviews 
+      - name: users 
